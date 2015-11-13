@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
-    <title>File API</title>
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<title>Ver archivos disponibles</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
-    <h1>Escritor de Archivos</h1>
+	<h1>Notas guardadas</h1>
+	<div id="archivos">
+		<!-- Aquí se van a mostrar todos los nombres de los archivos en la carpeta,
+		cada uno dentro de un div de clase lista y el id correspondiente a su número -->
+	</div>
+    
+    <div>
+    	<!-- Sólo te lleva a la página con el textarea -->
+    	<a href="escribir.html">
+	        <img id="mas" src="img/add.png">
+    	</a>
 
-    <p>Escribe el título del archivo</p>
-    <input type="text" id="titulo">
+    	<!-- Una vez que lo apretas, se checa que se ha apretado una vez uno de los archivos.
+    	Si está seleccionado, se manda a borrar el que tenga ese título y te avisa que se borró.
+    	Se debe recargar la página para que se vea que ya no está.  -->
+    	<div>
+	        <img id="menos" src="img/minus.png">
+    	</div>
+        
+    </div>
 
-    <p>Escribe el contenido</p>
-    <textarea id="contenido" rows="15" cols="40"></textarea><br><br>
-
-    <button onclick="escribeArchivo();">Guardar</button>
-    <button onclick="borraArchivo();">Borrar</button>
-    <a href="ver.html">Ver archivos</a>
-
-    <div id="messages"></div>
-
-    <script src="cordova.js"></script>
-    <script src="text.js"></script>
+	<script src="cordova.js"></script>
+    <script src="ver.js"></script>
 </body>
 </html>

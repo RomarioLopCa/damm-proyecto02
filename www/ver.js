@@ -22,10 +22,35 @@ function readerSuccess(entries) {
 
     for (i=0; i<entries.length; i++) {
         lista.innerHTML +=
-        "<div class=\"lista\" id=\""+i+"\">" + 
+        "<div class=\"lista\" id=\""+i+"\" onclick=clickMostrar("+i+");>" + 
             "<img src=\"img/repoop.png\"> " + entries[i].name + 
         "</div><br>";
     }
+}
+
+var toques = 0;
+var ultimaFila;
+// valida que se haga doble tap en un div antes de mostrar el contenido del archivo
+function clickMostrar(fila){
+    if(ultimaFila == null){
+        ultimaFila = fila;
+    }
+
+    if(ultimaFila == fila){
+        toques++;
+        if(toques == 2){
+            alert("Se hicieron dos toques en el mismo div");
+            // mostrarArchivo();
+        }
+    } else {
+        toques = 0;
+    }
+    ultimaFila = fila;
+}
+
+function mostrarArchivo(){
+    var contenido = document.getElementById('contenido');
+    var reader = new FileReader();
 }
 
 function fail() {

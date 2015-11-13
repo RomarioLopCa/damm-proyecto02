@@ -5,3 +5,17 @@ body {
 div.lista {
  	color: red;
 }
+
+img {
+	display: inline;
+	height: 100px;
+	width: 100px;
+}
+
+#mas {
+	float left;
+}
+
+#menos {
+	float: right;
+}
