@@ -35,6 +35,7 @@ function saveFile(filename, content) {
     }, errorHandler);
 
   }, errorHandler);
+  window.location.href = "index.html";
 }
 
 function borraArchivo(){

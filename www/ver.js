@@ -43,7 +43,7 @@ function clickMostrar(fila){
             // mostrarArchivo();
         }
     } else {
-        toques = 0;
+        toques = 1;
     }
     ultimaFila = fila;
 }

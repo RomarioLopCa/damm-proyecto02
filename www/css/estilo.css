@@ -6,7 +6,7 @@ div.lista {
  	color: red;
 }
 
-img {
+#mas, #menos {
 	display: inline;
 	height: 100px;
 	width: 100px;
