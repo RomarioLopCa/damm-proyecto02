@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-blob-constructor-polyfill": {
+            "PACKAGE_NAME": "com.example.file"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.example.file"
+        },
+        "org.apache.cordova.file": {
+            "PACKAGE_NAME": "com.example.file"
+        }
+    },
+    "dependent_plugins": {}
+}
