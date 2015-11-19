@@ -38,23 +38,6 @@ function saveFile(filename, content) {
   window.location.href = "index.html";
 }
 
-function borraArchivo(){
-  var titulo = document.getElementById("titulo").value;
-  if(titulo!= ""){
-    deleteFile(titulo + ".txt");
-  } else {
-    alert("No se está seleccionando un archivo para borrar.");
-  }
-}
-
-function deleteFile(filename){
-  var direccionArchivo = "proyecto/" + filename;
-  filesystem.root.getFile(direccionArchivo, {create: true}, function(fileEntry) {
-   fileEntry.remove();
- });
-  messageBox.innerHTML = "Se borró el archivo: " + filename;
-}
-
 function deviceReady(){
   // Allow for vendor prefixes.
   window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
