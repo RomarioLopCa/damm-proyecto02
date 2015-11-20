@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>File API</title>
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+
+    <script src="cordova.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+
+    <script src="notes-general.js"></script>
+    <script src="note-writer.js"></script>
+</head>
+<body>
+    <h1 id="form-title">Nueva nota</h1>
+
+    <p>Título de la nota</p>
+    <input type="text" id="note_title">
+
+    <p>Contenido</p>
+    <textarea id="note_content" rows="15" cols="40"></textarea><br><br>
+
+    <div>
+        <img id="mas" onclick="writeFile();" src="img/checked.png">
+
+        <img id="menos" src="img/cancel.png" onclick="discardNote()">
+    </div>
+
+
+</body>
+</html>

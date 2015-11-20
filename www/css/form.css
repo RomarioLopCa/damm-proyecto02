@@ -1,0 +1,8 @@
+body {
+    padding: 25px;
+}
+
+#textArea {
+    width: 100% !important;
+    height: 400px !important;
+}

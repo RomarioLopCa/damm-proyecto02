@@ -80,7 +80,7 @@ exports.defineAutoTests = function () {
             });
             //Define global variables
             var onError = function (e) {
-                console.log('[ERROR] Problem setting up root filesystem for test running! Error to follow.');
+                console.log('[ERROR] Problem setting up root fileSystem for test running! Error to follow.');
                 console.log(JSON.stringify(e));
             };
             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
@@ -2649,7 +2649,7 @@ exports.defineAutoTests = function () {
                 }, function (entry) {
                     originalEntry = entry;
                     /* This is an undocumented interface to File which exists only for testing
-                     * backwards compatibilty. By obtaining the raw filesystem path of the download
+                     * backwards compatibilty. By obtaining the raw fileSystem path of the download
                      * location, we can pass that to ft.download() to make sure that previously-stored
                      * paths are still valid.
                      */
@@ -2912,7 +2912,7 @@ exports.defineAutoTests = function () {
         //resolveLocalFileSystemURL on file://
         describe('cross-file-system copy and move', function () {
             /* These specs verify that Entry.copyTo and Entry.moveTo work correctly
-             * when crossing filesystem boundaries.
+             * when crossing fileSystem boundaries.
              */
             it("file.spec.125 copyTo: temporary -> persistent", function (done) {
                 var file1 = "entry.copy.file1a",

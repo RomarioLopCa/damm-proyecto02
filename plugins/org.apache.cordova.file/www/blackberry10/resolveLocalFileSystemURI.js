@@ -24,7 +24,7 @@
  *
  * IN
  *  args
- *   0 - escaped local filesystem URI
+ *   0 - escaped local fileSystem URI
  *   1 - options (standard HTML5 file system options)
  *   2 - size
  * OUT

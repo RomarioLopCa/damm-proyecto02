@@ -38,7 +38,7 @@ var argscheck = require('cordova/argscheck'),
  *            {DOMString} the absolute full path to the file or directory
  *            (readonly)
  * @param fileSystem
- *            {FileSystem} the filesystem on which this entry resides
+ *            {FileSystem} the fileSystem on which this entry resides
  *            (readonly)
  * @param nativeURL
  *            {DOMString} an alternate URL which can be used by native

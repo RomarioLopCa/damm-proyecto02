@@ -33,7 +33,7 @@ var argscheck = require('cordova/argscheck'),
  * {boolean} isDirectory always true (readonly)
  * {DOMString} name of the directory, excluding the path leading to it (readonly)
  * {DOMString} fullPath the absolute full path to the directory (readonly)
- * {FileSystem} filesystem on which the directory resides (readonly)
+ * {FileSystem} fileSystem on which the directory resides (readonly)
  */
 var DirectoryEntry = function(name, fullPath, fileSystem, nativeURL) {
 

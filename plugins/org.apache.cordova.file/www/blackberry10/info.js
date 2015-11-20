@@ -25,7 +25,7 @@
  * persistentPath - full path to app sandboxed persistent storage
  * temporaryPath - full path to app sandboxed temporary storage
  * localPath - full path to app source (www dir)
- * MAX_SIZE - maximum size for filesystem request
+ * MAX_SIZE - maximum size for fileSystem request
  */
 
 var info = {

@@ -46,9 +46,9 @@ module.exports = function (native) {
     //fix bb10 webkit incorrect nativeURL
     if (native.filesystem.name === 'root') {
         entry.nativeURL = 'file:///' + native.fullPath;
-    } else if (entry.nativeURL.indexOf('filesystem:local:///persistent/') === 0) {
+    } else if (entry.nativeURL.indexOf('fileSystem:local:///persistent/') === 0) {
         entry.nativeURL = info.persistentPath + native.fullPath;
-    } else if (entry.nativeURL.indexOf('filesystem:local:///temporary') === 0) {
+    } else if (entry.nativeURL.indexOf('fileSystem:local:///temporary') === 0) {
         entry.nativeURL = info.temporaryPath + native.fullPath;
     }
     //translate file system name from bb10 webkit
