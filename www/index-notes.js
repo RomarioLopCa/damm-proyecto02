@@ -44,8 +44,8 @@ function readerSuccess(entries) {
             "<tr>" +
                 "<td>" + entries[i].name.slice(0, -4) + "</td>" +
                 "<td class='operations'>" +
-                    "<img src='img/repoop.png' alt='"+entries[i].name+"' onclick='borraArchivo(this)'>" +
                     "<img src='img/repoop.png' alt='"+entries[i].name+"' onclick='editaArchivo(this)'>" +
+                    "<img src='img/repoop.png' alt='"+entries[i].name+"' onclick='borraArchivo(this)'>" +
                 "</td>" +
             "</tr>";
     }
