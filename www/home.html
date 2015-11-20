@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Ver archivos disponibles</title>
@@ -17,27 +18,23 @@
         <title>NOTAS</title>
     </head>
     <body>
+        <!--Primera página: LOGO y botón empezar-->
+        <section data-role="page" id="home">
 
-
-
-        <!--Segunda página: Index-->
-        <section data-role="page" id="index">
-            <header data-role="header" data-position="fixed">
-                <h1 style="font-family: Arial">Mis Notas</h1>
-            </header>
-
-            <div data-role="content" id="allNotes">
-                <span onclick="showOperations()"><img src="img/notesettings.png" style="text-align: right"></span>
-                <!-- Aquí se van a mostrar todos los nombres de los archivos en la carpeta,
-                cada uno dentro de un div de clase lista y el id correspondiente a su número -->
+            <div data-role="content" style="top: 10%; position: absolute;">
+                <br>
+                <br>
+                <img src="img/NOTE+.png" alt="" width="100%" height="50%"/>
+                <br>
+                <br>
+                <br>
+                <p id="boton_empezar">
+                    <a href="index.html" data-role="button" data-transition="slide">Empezar</a>
+                </p>
             </div>
 
-            <div>
-                <img id="mas" src="img/noteadd.png" onclick="newNote()">
-            </div>
             <footer data-role="footer" data-position="fixed">
                 <div style="text-align: center">RLópez y MGonzález</div>
-
             </footer>
         </section>
     </body>

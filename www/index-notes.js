@@ -34,18 +34,18 @@ function readerSuccess(entries) {
     var i;
     var allNotes = document.getElementById("allNotes");
 
-    var table = "<table data-role='table'>" +
+    var table = "<table data-role='table' style='text-align: right'>" +
         "<tr>" +
             "<th>Notas</th>" +
-            "<th>Operaciones</th>" +
+            "<th>Herramientas</th>" +
         "</tr>";
     for (i = 0; i < entries.length; i++) {
         table +=
             "<tr>" +
                 "<td>" + entries[i].name.slice(0, -4) + "</td>" +
                 "<td class='operations'>" +
-                    "<img src='img/repoop.png' alt='"+entries[i].name+"' onclick='editaArchivo(this)'>" +
-                    "<img src='img/repoop.png' alt='"+entries[i].name+"' onclick='borraArchivo(this)'>" +
+                    "<img src='img/noteedit.png' alt='"+entries[i].name+"' onclick='editaArchivo(this)'>" +
+                    "<img src='img/notedelete.png' alt='"+entries[i].name+"' onclick='borraArchivo(this)'>" +
                 "</td>" +
             "</tr>";
     }
