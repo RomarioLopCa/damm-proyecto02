@@ -2,7 +2,7 @@ body {
     padding: 25px;
 }
 
-#textArea {
+#note_content {
     width: 100% !important;
-    height: 400px !important;
+    height: 300px !important;
 }

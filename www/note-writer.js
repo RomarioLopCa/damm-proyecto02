@@ -1,6 +1,5 @@
 document.addEventListener("deviceready", deviceReady, false);
 function deviceReady() {
-
     window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
     if (window.requestFileSystem) {
         initFileSystem();
