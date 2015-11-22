@@ -31,7 +31,7 @@ function readerSuccess(entries) {
         data +=
                 "<li>" +
                 "<a href='#'>" + entries[i].name.slice(0, -4) +
-                    "<span class='operations ul-li-aside ui-btn-right'>" +
+                    "<span class='operations ul-li-aside ui-btn-right' hidden>" +
                         "<img src='img/noteedit.png' alt='"+entries[i].name+"' onclick='editaArchivo(this)'>" +
                         "<img src='img/notedelete.png' alt='"+entries[i].name+"' onclick='borraArchivo(this)'>" +
                     "</span>" +
@@ -40,19 +40,24 @@ function readerSuccess(entries) {
     }
     $("#lista").append(data);
 
-    $("#lista").listview("refresh");
+    refreshData();
 
+}
+
+function refreshData(){
+    $("#lista").listview("refresh");
 }
 
 function borraArchivo(selectedNote) {
 
-    var fileName = selectedNote.alt
-    var row = selectedNote.parentNode.parentNode;
+    var fileName = selectedNote.alt;
+    var row = selectedNote.parentNode.parentNode.parentNode;
 
     //Preguntamos si quiere eliminar el archivo
     if (confirm("En realidad desea eliminar la nota " + fileName + "?")) {
         //Escondemos la fila de la tabla para no refrescar toda la pagina
-        row.style.display = "none";
+        row.remove();
+        refreshData();
 
         var file = pathName + "/" + fileName;
         fileSystem.root.getFile(file, {create: false}, function (fileEntry) {

@@ -51,7 +51,7 @@ function saveFile(filename, content) {
                 } else {
                     alert('Nota agregada con exito');
                 }
-                window.location.href = 'index.html';
+                window.location.href = 'index.html#index';
             };
 
             fileWriter.onerror = function (e) {
@@ -71,7 +71,7 @@ function discardNote() {
             window.location.href = 'index.html#index';
         }
     }else {
-        window.location.href = 'index.html';
+        window.location.href = 'index.html#index';
     }
 }
 // A simple error handler to be used throughout this demo.
