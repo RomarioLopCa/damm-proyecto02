@@ -10,18 +10,8 @@ function onFileSystemSuccess(sistemaArchivos) {
 }
 
 function showOperations() {
-    var allNotesOperations = document.getElementsByClassName('operations');
-
-
-    if (allNotesOperations[0].style.display == 'none') {
-        for (i = 0; i < allNotesOperations.length; i++) {
-            allNotesOperations[i].style.display = 'block';
-        }
-    } else {
-        for (i = 0; i < allNotesOperations.length; i++) {
-            allNotesOperations[i].style.display = 'none';
-        }
-    }
+    var allNotesOperations = $('.operations');
+    allNotesOperations.toggle("slow");
 }
 
 function getDirSuccess(dirEntry) {
@@ -32,25 +22,25 @@ function getDirSuccess(dirEntry) {
 
 function readerSuccess(entries) {
     var i;
-    var allNotes = document.getElementById("allNotes");
+    var notes = $('#allNotes');
+   notes.append("<ul id='lista' data-role='listview' data-icon='false' data-inset='true' data-filter='true' data-filter-placeholder='Buscar nota...'></ul>");
+    notes.trigger("create");
 
-    var table = "<table data-role='table' style='text-align: right'>" +
-        "<tr>" +
-            "<th>Notas</th>" +
-            "<th>Herramientas</th>" +
-        "</tr>";
+    var data = "";
     for (i = 0; i < entries.length; i++) {
-        table +=
-            "<tr>" +
-                "<td>" + entries[i].name.slice(0, -4) + "</td>" +
-                "<td class='operations'>" +
-                    "<img src='img/noteedit.png' alt='"+entries[i].name+"' onclick='editaArchivo(this)'>" +
-                    "<img src='img/notedelete.png' alt='"+entries[i].name+"' onclick='borraArchivo(this)'>" +
-                "</td>" +
-            "</tr>";
+        data +=
+                "<li>" +
+                "<a href='#'>" + entries[i].name.slice(0, -4) +
+                    "<span class='operations ul-li-aside ui-btn-right'>" +
+                        "<img src='img/noteedit.png' alt='"+entries[i].name+"' onclick='editaArchivo(this)'>" +
+                        "<img src='img/notedelete.png' alt='"+entries[i].name+"' onclick='borraArchivo(this)'>" +
+                    "</span>" +
+                "</a>" +
+                "</li>";
     }
-    table += "</table>";
-    allNotes.innerHTML = table;
+    $("#lista").append(data);
+
+    $("#lista").listview("refresh");
 
 }
 

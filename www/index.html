@@ -5,6 +5,8 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css">
 
+        <link rel="stylesheet" href="css/NOTAS-BORDES.css"/>
+
         <script src="cordova.js"></script>
         <script src="notes-general.js"></script>
         <script src="index-notes.js"></script>
@@ -12,32 +14,44 @@
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/jquery.mobile-1.4.5.js"></script>
 
-        <link rel="stylesheet" href="css/NOTAS.css"/>
 
         <title>NOTAS</title>
     </head>
     <body>
+        <!--Primera página: LOGO y botón empezar-->
+        <section data-role="page" id="home">
 
+            <div data-role="content" style="top: 10%; position: absolute;">
+                <br>
+                <br>
+                <img src="img/NOTE+.png" alt="" width="100%" height="50%"/>
+                <br>
+                <br>
+                <br>
+                <p id="boton_empezar">
+                    <a href="#index" data-role="button" data-transition="slide">Empezar</a>
+                </p>
+            </div>
 
+            <footer data-role="footer" data-position="fixed">
+                <div style="text-align: center">RLópez y MGonzález</div>
+            </footer>
+        </section>
 
         <!--Segunda página: Index-->
-        <section data-role="page" id="index">
+        <section data-role="page" id="index" data-theme="b">
             <header data-role="header" data-position="fixed">
+                <a href="#" data-role="button" class="ui-btn-left" onclick="newNote();"><img src="img/noteadd.png" alt="" width="18px"></a>
                 <h1 style="font-family: Arial">Mis Notas</h1>
+                <a href="#" data-role="button" class="ui-btn-right" onclick="showOperations();"><img src="img/notesettings.png" alt="" width="18px"></a>
+
             </header>
 
             <div data-role="content" id="allNotes">
-                <span onclick="showOperations()"><img src="img/notesettings.png" style="text-align: right"></span>
-                <!-- Aquí se van a mostrar todos los nombres de los archivos en la carpeta,
-                cada uno dentro de un div de clase lista y el id correspondiente a su número -->
             </div>
 
-            <div>
-                <img id="mas" src="img/noteadd.png" onclick="newNote()">
-            </div>
             <footer data-role="footer" data-position="fixed">
                 <div style="text-align: center">RLópez y MGonzález</div>
-
             </footer>
         </section>
     </body>

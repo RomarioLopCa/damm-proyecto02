@@ -68,7 +68,7 @@ function saveFile(filename, content) {
 function discardNote() {
     if(!window.localStorage.getItem("editable")){
         if (confirm('¿Estás seguro desea descartar la nota?')) {
-            window.location.href = 'index.html';
+            window.location.href = 'index.html#index';
         }
     }else {
         window.location.href = 'index.html';
